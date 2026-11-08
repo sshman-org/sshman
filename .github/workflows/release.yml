@@ -59,7 +59,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git tag -a "$VERSION" -m "sshman $VERSION" "$GITHUB_SHA"
           git push origin "refs/tags/$VERSION"
-      - uses: actions/attest-build-provenance@v3
+      - uses: actions/attest-build-provenance@v4
         with:
           subject-path: "dist/sshman_*"
       - name: create draft release
