@@ -39,7 +39,7 @@ jobs:
           if git ls-remote --exit-code --tags origin "refs/tags/$VERSION" >/dev/null; then
             echo "::error::tag $VERSION already exists; choose a new version"; exit 1
           fi
-      - uses: actions/setup-go@v6
+      - uses: actions/setup-go@v7
         with:
           go-version-file: go.mod
       - run: go test -count=1 ./...
